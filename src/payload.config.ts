@@ -1,7 +1,8 @@
 import path from "path";
 import { fileURLToPath } from "url";
 
-import { mongooseAdapter } from "@payloadcms/db-mongodb";
+// CHANGED: Replace MongoDB adapter with Postgres adapter
+import { postgresAdapter } from "@payloadcms/db-postgres";
 import { s3Storage } from "@payloadcms/storage-s3";
 import { buildConfig } from "payload";
 import { en } from "payload/i18n/en";
@@ -110,8 +111,11 @@ export default buildConfig({
   },
   // This config helps us configure global or default features that the other editors can inherit
   editor: defaultLexical,
-  db: mongooseAdapter({
-    url: process.env.DATABASE_URI ?? "",
+  // CHANGED: Replace MongoDB with Postgres adapter for Supabase
+  db: postgresAdapter({
+    pool: {
+      connectionString: process.env.DATABASE_URI,
+    },
   }),
   collections: [
     Pages,
@@ -145,13 +149,15 @@ export default buildConfig({
       collections: {
         [Media.slug]: true,
       },
-      bucket: process.env.S3_BUCKET ?? "",
+      // CHANGED: Updated S3 config for Supabase Storage
+      bucket: process.env.SUPABASE_STORAGE_BUCKET ?? "media",
       config: {
-        endpoint: process.env.S3_ENDPOINT ?? "",
-        region: "auto",
+        forcePathStyle: true, // Required for Supabase Storage
+        endpoint: process.env.SUPABASE_STORAGE_ENDPOINT,
+        region: process.env.SUPABASE_REGION ?? "us-east-1",
         credentials: {
-          accessKeyId: process.env.S3_ACCESS_KEY_ID ?? "",
-          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY ?? "",
+          accessKeyId: process.env.SUPABASE_ACCESS_KEY_ID ?? "",
+          secretAccessKey: process.env.SUPABASE_SECRET_ACCESS_KEY ?? "",
         },
         requestChecksumCalculation: "WHEN_REQUIRED",
         responseChecksumValidation: "WHEN_REQUIRED",
