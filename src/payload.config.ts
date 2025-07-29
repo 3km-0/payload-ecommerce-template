@@ -113,6 +113,7 @@ export default buildConfig({
   editor: defaultLexical,
   // CHANGED: Replace MongoDB with Postgres adapter for Supabase
   db: postgresAdapter({
+    idType: 'uuid',
     pool: {
       connectionString: process.env.DATABASE_URI,
     },
