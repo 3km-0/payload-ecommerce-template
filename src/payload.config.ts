@@ -12,24 +12,29 @@ import sharp from "sharp"; // sharp-import
 import { defaultLexical } from "@/fields/defaultLexical";
 
 import { customTranslationsObject } from "./admin/translations/custom-translations";
-import { Customers } from "./collections/(ecommerce)/Customers";
-import { Orders } from "./collections/(ecommerce)/Orders";
-import { ProductCategories } from "./collections/(ecommerce)/ProductCategories";
-import { ProductReviews } from "./collections/(ecommerce)/ProductReviews";
-import { ProductSubCategories } from "./collections/(ecommerce)/ProductSubCategories";
-import { Products } from "./collections/(ecommerce)/Products";
+
+import { Customers } from "./collections/ecommerce/Customers";
+import { Orders } from "./collections/ecommerce/Orders";
+import { ProductCategories } from "./collections/ecommerce/ProductCategories";
+import { ProductReviews } from "./collections/ecommerce/ProductReviews";
+import { ProductSubCategories } from "./collections/ecommerce/ProductSubCategories";
+import { Products } from "./collections/ecommerce/Products";
+
+
 import { Administrators } from "./collections/Administrators";
 import { Categories } from "./collections/Categories";
 import { Media } from "./collections/Media";
 import { Pages } from "./collections/Pages";
 import { Posts } from "./collections/Posts";
-import { InPostCourier } from "./globals/(ecommerce)/Couriers/InPostCourier/config";
-import { InPostCourierCOD } from "./globals/(ecommerce)/Couriers/InPostCourierCOD/config";
-import { InPostPickup } from "./globals/(ecommerce)/Couriers/InPostPickup/config";
-import { Fulfilment } from "./globals/(ecommerce)/Fulfilment";
-import { ShopLayout } from "./globals/(ecommerce)/Layout/config";
-import { Paywalls } from "./globals/(ecommerce)/Paywalls/config";
-import { ShopSettings } from "./globals/(ecommerce)/ShopSettings/config";
+
+import { InPostCourier } from "./globals/ecommerce/Couriers/InPostCourier/config";
+import { InPostCourierCOD } from "./globals/ecommerce/Couriers/InPostCourierCOD/config";
+import { InPostPickup } from "./globals/ecommerce/Couriers/InPostPickup/config";
+import { Fulfilment } from "./globals/ecommerce/Fulfilment";
+import { ShopLayout } from "./globals/ecommerce/Layout/config";
+import { Paywalls } from "./globals/ecommerce/Paywalls/config";
+import { ShopSettings } from "./globals/ecommerce/ShopSettings/config";
+
 import { EmailMessages } from "./globals/EmailMessages/config";
 import { Footer } from "./globals/Footer/config";
 import { Header } from "./globals/Header/config";
