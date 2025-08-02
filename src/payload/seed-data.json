@@ -1,0 +1,28 @@
+{
+  "siteName": "Shawirmar's Store",
+  "products": [
+    {
+      "title": "Shawirmar Signature T-Shirt",
+      "description": "The official high-quality cotton t-shirt from the Shawirmar collection. Perfect for any occasion.",
+      "price": 29.99
+    },
+    {
+      "title": "Shawirmar Premium Coffee Mug",
+      "description": "Start your day right with a warm beverage in this durable and stylish branded mug from Shawirmar.",
+      "price": 14.99
+    }
+  ],
+  "pages": {
+    "home": {
+      "title": "Home",
+      "hero": {
+        "title": "Welcome to Shawirmar's Store",
+        "description": "Discover our exclusive collection of high-quality products, curated just for you."
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "content": "At Shawirmar's Store, we believe in quality, craftsmanship, and customer satisfaction. Our mission is to bring you products that you'll love for years to come."
+    }
+  }
+}
