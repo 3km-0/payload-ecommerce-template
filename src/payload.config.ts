@@ -7,7 +7,7 @@ import { s3Storage } from "@payloadcms/storage-s3";
 import { buildConfig } from "payload";
 import { en } from "payload/i18n/en";
 import { pl } from "payload/i18n/pl";
-import sharp from "sharp"; // sharp-import
+import sharp from "sharp"; // sharp-import 
 
 import { defaultLexical } from "@/fields/defaultLexical";
 
