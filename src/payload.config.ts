@@ -49,7 +49,7 @@ const dirname = path.dirname(filename);
 export default buildConfig({
   admin: {
     avatar: {
-      Component: "@/components/AdminAvatar#AdminAvatar",
+      Component: "@/components/ecommerce/AdminDashboard#AdminDashboard",
     },
     components: {
       afterLogin: ["@/components/AdminResetPassword#AdminResetPassword"],
@@ -62,10 +62,10 @@ export default buildConfig({
       },
       views: {
         dashboard: {
-          Component: "@/components/(ecommerce)/AdminDashboard#AdminDashboard",
+          Component: "@/components/ecommerce/AdminDashboard#AdminDashboard",
         },
       },
-      beforeNavLinks: ["@/components/(ecommerce)/AdminDashboardNavLink#AdminDashboardNavLink"],
+      beforeNavLinks: ["@/components/ecommerce/AdminDashboardNavLink#AdminDashboardNavLink"],
     },
     meta: {
       icons: [
